@@ -1,0 +1,4 @@
+empid,fname,lname,deptid
+1,Dinesh,Ameneni,1
+2,shanthi,Ameneni,5
+4,satish,a,4
