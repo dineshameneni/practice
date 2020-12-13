@@ -11,10 +11,14 @@ import pyodbc
 
 def sqlServerConnection():
     server = 'DESKTOP-LFUN2G8' 
-    database = 'sample1'
-    connection = pyodbc.connect('Trusted_Connection=yes',
-               driver='{SQL Server}', server=server,
-               database=database)
+    database = 'sample22'
+    try:
+        connection = pyodbc.connect('Trusted_Connection=yes',
+                   driver='{SQL Server}', server=server,
+                   database=database)
+    except pyodbc.Error as e:
+        print("SQL Connection Error: "+str(e))
+        
     return connection
 
 def sqlServerDisconnect(connection):
