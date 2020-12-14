@@ -16,7 +16,7 @@ class Profession():
         cursor.execute('Select isnull(max(professionalid),0)+1 as professional from professional')
 
         professionalid = cursor.fetchone()
-        
+            
         cursor.execute('SELECT USER_NAME(1)')
         username = cursor.fetchone()
         
